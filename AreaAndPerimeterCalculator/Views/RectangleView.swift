@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct RectangleView: View {
+    
+    // MARK: Stored properties
+    let length: Double = 100
+    let width: Double = 5
+    
+    // MARK: Computed properties
+    var area: Double {
+        return length * width
+    }
+    
+    // Expressing the user interface
     var body: some View {
         VStack(spacing: 15) {
             
@@ -24,24 +35,26 @@ struct RectangleView: View {
                 .font(.title2)
                 .bold()
             
-            Text("7.0")
+            // Use string interpolation to convert
+            // the Double data type to text (String)
+            //
+            // \(variable)
+            Text("\(length)")
                 .font(.title2)
 
             Text("Width")
                 .font(.title2)
                 .bold()
             
-            Text("5.0")
+            Text("\(width)")
                 .font(.title2)
 
             Text("Area")
                 .font(.title2)
                 .bold()
             
-            Text("35.0")
+            Text("\(area)")
                 .font(.title2)
-
-
             
             Spacer()
             
